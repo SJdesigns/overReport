@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Overwatch Stats</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/lang.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<div id="loadingBack">
+		<div class="spinner"></div>
+		<div id="errorMessage"></div>
+	</div>
+	<header>
+		<div id="headerTitle">
+			<div id="headerIcon">
+				<a href=""><img src="img/favicon.png" /></a>
+			</div>
+			<form id="searchBoxSubmit" action="">
+				<div id="searchPlayer">
+					<input id="searchBox" type="text" spellcheck="false" value="" placeholder="usuario-id" autocomplete="off" autofocus />
+					<select id="pickServer">
+						<option value="eu">EU</option>
+						<option value="us">US</option>
+					</select>
+				</div>
+				<input type="submit" style="display:none" />
+			</form>
+			<div id="headerOptions">
+				<div id="chooseLang">
+					<img id="chooseLangFlag" src="img/flags/EN2.svg" />
+					<div>
+						<p onclick="changeLang('en')">EN</p>
+						<p onclick="changeLang('es')">ES</p>
+						<p onclick="changeLang('fr')">FR</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="searchSuggests"></div>
+		<div id="headerPlayer" class="container">
+			<div id="playerInfoLeft">
+				<img id="playerIcon" src="" />
+				<h1></h1>
+				<div id="playerLevel">
+					<div>
+						<p></p>
+					</div>
+					<div>
+						<p>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div id="playerInfoRight" class="container">
+				<div class="row">
+					<div class="col-md-6" id="playerRank">
+						<p>Ranking actual</p>
+						<p><img src="" /> <i></i></p>
+					</div>
+					<div class="col-md-6" id="playerVictories">
+						<p>Victorias</p>
+						<p><i></i></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-md-offset-6" id="playerTimePlayed">
+						<p>Tiempo Jugado</p>
+						<p><i></i></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav>
+			<div class="navOption navOptionActive" id="navQuick" onclick="changeTab('quick')">Quick Play</div>
+			<div class="navOption" id="navRanked" onclick="changeTab('ranked')">Competitive</div>
+		</nav>
+	</header>
+	<section class="container">
+		<div class="row">
+			<div class="col-md-7" id="sectionLeft">
+				<div class="container" id="medals">
+					<h2 id="titleMedals">Medallas</h2>
+					<div class="row">
+						<div class="col-md-4">
+							<img src="img/goldMedal.png" alt="medallas de oro" title="medallas de oro">
+							<p id="goldMedals"></p>
+						</div>
+						<div class="col-md-4">
+							<img src="img/silverMedal.png" alt="medallas de plata" title="medallas de plata">
+							<p id="silverMedals"></p>
+						</div>
+						<div class="col-md-4">
+							<img src="img/bronzeMedal.png" alt="medallas de bronce" title="medallas de bronce">
+							<p id="bronzeMedals"></p>
+						</div>
+					</div>
+				</div>
+				<div class="container" id="generalStats">
+					<h2 id="titleGeneralData">Datos Totales</h2>
+					<div class="row">
+						<div class="col-md-4">
+							<h4>Eliminaciones</h4><p id="totalDataKills"></p>
+						</div>
+						<div class="col-md-4">
+							<h4>Daño a Heroes</h4><p id="totalDataHeroeDamage"></p>
+						</div>
+						<div class="col-md-4">
+							<h4>T. en Objetivos</h4><p id="totalDataObjectiveTime"></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<h4>Muertes</h4><p id="totalDataDeaths"></p>
+						</div>
+						<div class="col-md-4">
+							<h4>Daño a Barreras</h4><p id="totalDataBarrierDamage"></p>
+						</div>
+						<div class="col-md-4">
+							<h4>Elims. Objetivos</h4><p id="totalDataObjectiveKills"></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<h4>Golpes de Gracia</h4><p id="totalDataFinalBlows"></p>
+						</div>
+						<div class="col-md-4">
+							<h4>Elim. Solitario</h4><p id="totalDataSoloKills"></p>
+						</div>
+						<div class="col-md-4">
+							<h4>T. On Fire</h4><p id="totalDataOnFire"></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<h4>Sanación</h4><p id="totalDataHealing"></p>
+						</div>
+						<div class="col-md-4">
+							<h4>Asistencias Of.</h4><p id="totalDataOfAssists"></p>
+						</div>
+						<div class="col-md-4">
+							<h4>E. Entorno</h4><p id="totalDataEnvironmentalKills"></p>
+						</div>
+					</div>
+				</div>
+				<div class="container" id="recordStats">
+					<h2 id="titleBestGameResults">Mejor dato por partida</h2>
+					<div class="row">
+						<div class="col-md-4">
+							<h4>Eliminaciones</h4><p id="recordStatsKills"></p>
+						</div>
+						<div class="col-md-4">
+							<h4>Daño a Heroes</h4><p id="recordStatsHeroeDamage"></p>
+						</div>
+						<div class="col-md-4">
+							<h4>T. Objetivos</h4><p id="recordStatsObjectiveTime"></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<h4>Racha de Elim.</h4><p id="recordStatsKillStreak"></p>
+						</div>
+						<div class="col-md-4">
+							<h4>Daño a Barreras</h4><p id="recordStatsBarrierDamage"></p>
+						</div>
+						<div class="col-md-4">
+							<h4>Elim. Objetivos</h4><p id="recordStatsObjectiveKills"></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<h4>Golpes de Gracia</h4><p id="recordStatsFinalBlows"></p>
+						</div>
+						<div class="col-md-4">
+							<h4>Elim. Solitario</h4><p id="recordStatsSoloKills"></p>
+						</div>
+						<div class="col-md-4">
+							<h4>T. On Fire</h4><p id="recordStatsOnFire"></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<h4>Sanación</h4><p id="recordStatsHealing"></p>
+						</div>
+						<div class="col-md-4">
+							<h4>Asistencias Of.</h4><p id="recordStatsOfAssists"></p>
+						</div>
+						<div class="col-md-4">
+							<h4>Asistencias Def.</h4><p id="recordStatsDefAssists"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-5" id="sectionRight">
+				<div id="heroesTop">
+					<h2 id="titleHeroes">Héroes</h2>
+					<select>
+						<option value="timePlayed">Tiempo jugado</option>
+						<option value="gamesWon">Partidas Ganadas</option>
+						<option value="killRatio">Proporción Elims.</option>
+						<option value="weaponAccuracy">Precisión</option>
+						<option value="multikill">Mayor Baja Múltiple</option>
+						<option value="bestKillStreak">Mejor Racha</option>
+						<option value="damageHeroes">Max. Daño Infringido</option>
+						<option value="totalEliminations">Total de eliminaciones</option>
+						<option value="totalDeaths">Total de muertes</option>
+						<option value="finalBlows">Golpes de gracia</option>
+					</select>
+				</div>
+				<div id="heroesList">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<h2 id="heroesDetailTitle">Todos los datos de los héroes</h2>
+			<div class="col-md-12" id="heroesDetailSection">
+			</div>
+		</div>
+	</section>
+	<div id="goToUp">
+		<svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+		    <path d="M0 0h24v24H0V0z" fill="none"/>
+		    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+		</svg>
+	</div>
+	<footer>
+		<div>
+			<img src="img/logotipo.png" />
+		</div>
+		<div>
+		</div>
+	</footer>
+</body>
+</html>

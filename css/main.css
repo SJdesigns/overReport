@@ -1,0 +1,386 @@
+header {
+  position: relative;
+  width: 100%;
+  background-color: #2196f3;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10; }
+  header #headerTitle {
+    position: relative;
+    width: 100%;
+    height: 46px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around; }
+    header #headerTitle #headerIcon img {
+      position: relative;
+      width: 40px;
+      top: 3px; }
+    header #headerTitle #searchPlayer input {
+      position: relative;
+      width: 650px;
+      height: 38px;
+      margin: 4px;
+      outline: 0;
+      border: 0px;
+      font-size: 13pt;
+      padding: 0px 14px;
+      box-sizing: border-box;
+      background-color: rgba(0, 0, 0, 0.08);
+      transition: background-color 0.2s; }
+      header #headerTitle #searchPlayer input:hover, header #headerTitle #searchPlayer input:focus {
+        background-color: rgba(0, 0, 0, 0.12); }
+    header #headerTitle #searchPlayer select {
+      height: 38px;
+      outline: 0;
+      border: 0px;
+      font-style: 13pt; }
+      header #headerTitle #searchPlayer select:hover, header #headerTitle #searchPlayer select:focus {
+        background-color: rgba(0, 0, 0, 0.1); }
+    header #headerTitle #headerOptions {
+      position: relative;
+      width: 200px; }
+      header #headerTitle #headerOptions #chooseLang {
+        position: absolute;
+        width: 35px;
+        right: 0px;
+        padding: 10px 0px; }
+        header #headerTitle #headerOptions #chooseLang:hover div {
+          display: block; }
+        header #headerTitle #headerOptions #chooseLang img {
+          position: relative;
+          width: 35px;
+          height: 26px;
+          border-radius: 3px; }
+        header #headerTitle #headerOptions #chooseLang div {
+          position: relative;
+          width: 100%;
+          height: auto;
+          background-color: #fff;
+          box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.24);
+          display: none; }
+          header #headerTitle #headerOptions #chooseLang div p {
+            text-align: center;
+            padding: 6px 0px;
+            margin: 0px;
+            cursor: pointer; }
+            header #headerTitle #headerOptions #chooseLang div p:hover {
+              background-color: rgba(0, 0, 0, 0.1); }
+  header #searchSuggests {
+    position: relative;
+    width: 100%;
+    height: auto;
+    font-size: 13pt;
+    background-color: #fff;
+    display: none; }
+    header #searchSuggests .searchSuggestsItem {
+      position: relative;
+      float: left;
+      width: 20%;
+      padding: 8px 0px;
+      text-align: center;
+      cursor: pointer; }
+      header #searchSuggests .searchSuggestsItem:hover {
+        color: #2196f3; }
+  header #headerPlayer {
+    position: relative;
+    height: 154px;
+    overflow: hidden;
+    padding: 17px 0px;
+    box-sizing: border-box;
+    display: none; }
+    header #headerPlayer #playerInfoLeft {
+      position: relative;
+      float: left;
+      width: 500px;
+      height: 100%;
+      color: #fff; }
+      header #headerPlayer #playerInfoLeft img#playerIcon {
+        position: relative;
+        float: left;
+        height: 120px;
+        top: 0px;
+        margin-right: 32px; }
+      header #headerPlayer #playerInfoLeft h1 img {
+        width: 40px;
+        margin-top: -5px;
+        margin-left: 20px; }
+      header #headerPlayer #playerInfoLeft #playerLevel {
+        position: relative;
+        float: left;
+        width: auto;
+        height: 27px;
+        margin: 7px 0px;
+        background-color: rgba(255, 255, 255, 0.1); }
+        header #headerPlayer #playerInfoLeft #playerLevel div:nth-child(1) {
+          position: relative;
+          float: left;
+          height: 100%;
+          color: #fff;
+          font-weight: bold;
+          font-size: 13pt;
+          padding: 2px 7px;
+          border-radius: 4px 0px 0px 4px;
+          background-color: rgba(255, 255, 255, 0.15);
+          box-sizing: border-box; }
+        header #headerPlayer #playerInfoLeft #playerLevel div:nth-child(2) {
+          position: relative;
+          float: left;
+          height: 100%;
+          color: #f00;
+          padding: 2px 7px;
+          box-sizing: border-box; }
+          header #headerPlayer #playerInfoLeft #playerLevel div:nth-child(2) img {
+            width: 21px;
+            height: 21px; }
+    header #headerPlayer #playerInfoRight {
+      position: relative;
+      float: right;
+      width: 340px;
+      height: 100%;
+      color: #fff; }
+      header #headerPlayer #playerInfoRight p {
+        font-size: 13pt;
+        text-align: center;
+        margin: 0px 0px 5px; }
+        header #headerPlayer #playerInfoRight p img {
+          width: 38px;
+          margin-top: -6px;
+          vertical-align: top; }
+        header #headerPlayer #playerInfoRight p i {
+          font-size: 16pt;
+          text-align: center; }
+  header nav {
+    position: relative;
+    margin: auto;
+    width: 320px;
+    height: 40px;
+    margin-top: -40px;
+    visibility: hidden;
+    display: flex; }
+    header nav .navOption {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      color: #fff;
+      font-size: 13pt;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.08);
+      cursor: pointer; }
+      header nav .navOption:hover {
+        background-color: rgba(0, 0, 0, 0.14); }
+    header nav .navOptionActive {
+      color: #FFC107;
+      background-color: rgba(0, 0, 0, 0.14); }
+
+div#loadingBack {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 8;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  div#loadingBack #errorMessage {
+    position: fixed;
+    width: 100%;
+    font-size: 15pt;
+    display: flex;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center; }
+  div#loadingBack .spinner {
+    width: 80px;
+    height: 80px;
+    background-color: #FFC107;
+    margin: 100px auto;
+    -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+    animation: sk-rotateplane 1.2s infinite ease-in-out; }
+@-webkit-keyframes sk-rotateplane {
+  0% {
+    -webkit-transform: perspective(120px); }
+  50% {
+    -webkit-transform: perspective(120px) rotateY(180deg); }
+  100% {
+    -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg); } }
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: sans-serif; }
+
+body {
+  background-color: #fff; }
+
+section #sectionLeft #medals, section #sectionLeft #generalStats, section #sectionLeft #recordStats {
+  position: relative;
+  width: 100%;
+  height: auto; }
+  section #sectionLeft #medals h2:first-letter, section #sectionLeft #generalStats h2:first-letter, section #sectionLeft #recordStats h2:first-letter {
+    color: #2196f3; }
+  section #sectionLeft #medals div > div, section #sectionLeft #generalStats div > div, section #sectionLeft #recordStats div > div {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.12); }
+    section #sectionLeft #medals div > div h4, section #sectionLeft #generalStats div > div h4, section #sectionLeft #recordStats div > div h4 {
+      font-size: 16pt; }
+    section #sectionLeft #medals div > div p, section #sectionLeft #generalStats div > div p, section #sectionLeft #recordStats div > div p {
+      font-size: 13pt; }
+    section #sectionLeft #medals div > div img, section #sectionLeft #generalStats div > div img, section #sectionLeft #recordStats div > div img {
+      width: 50px;
+      text-align: center; }
+    section #sectionLeft #medals div > div img + p, section #sectionLeft #generalStats div > div img + p, section #sectionLeft #recordStats div > div img + p {
+      position: relative;
+      margin-top: -36px;
+      text-align: center;
+      font-size: 14pt; }
+section #sectionRight #heroesTop {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  margin-bottom: 2px;
+  justify-content: space-between; }
+  section #sectionRight #heroesTop h2:first-letter {
+    color: #2196f3; }
+  section #sectionRight #heroesTop select {
+    position: relative;
+    width: 220px;
+    height: 30px;
+    font-size: 13pt;
+    margin-top: 22px;
+    outline: 0;
+    border: 0px;
+    padding: 0px 8px;
+    border-bottom: 2px solid #ccc;
+    transition: border-bottom 0.15s;
+    box-sizing: border-box; }
+    section #sectionRight #heroesTop select:hover {
+      border-bottom: 2px solid #2196f3; }
+section #sectionRight #heroesList .heroeData {
+  position: relative;
+  width: 100%;
+  height: 36px;
+  margin: 2px 0px;
+  transition: background-color 0.07s; }
+  section #sectionRight #heroesList .heroeData:hover {
+    background-color: rgba(0, 0, 0, 0.1); }
+  section #sectionRight #heroesList .heroeData img {
+    position: relative;
+    float: left;
+    width: 40px;
+    height: 36px;
+    margin-right: 12px; }
+  section #sectionRight #heroesList .heroeData .heroeBar {
+    position: absolute;
+    width: 100%;
+    height: 36px;
+    padding-left: 40px; }
+    section #sectionRight #heroesList .heroeData .heroeBar div {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box; }
+      section #sectionRight #heroesList .heroeData .heroeBar div span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.14); }
+      section #sectionRight #heroesList .heroeData .heroeBar div p {
+        font-size: 13pt;
+        margin: 0px 5px;
+        padding: 6px 0px 6px 5px;
+        z-index: 1; }
+        section #sectionRight #heroesList .heroeData .heroeBar div p i {
+          float: right; }
+section #heroesDetailTitle {
+  margin-top: 50px; }
+section #heroesDetailSection {
+  margin-top: 12px; }
+  section #heroesDetailSection .heroeDetail {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 14px 0px; }
+    section #heroesDetailSection .heroeDetail .heroeDetailTop {
+      position: relative;
+      width: 100%;
+      height: 40px;
+      background-color: #ddd;
+      display: flex;
+      justify-content: space-between; }
+      section #heroesDetailSection .heroeDetail .heroeDetailTop div {
+        display: flex; }
+        section #heroesDetailSection .heroeDetail .heroeDetailTop div .heroeDetailImg {
+          width: 46px;
+          height: 46px;
+          margin: -14px 0px 0px 14px; }
+        section #heroesDetailSection .heroeDetail .heroeDetailTop div h3 {
+          margin-top: 9px;
+          margin-left: 15px; }
+        section #heroesDetailSection .heroeDetail .heroeDetailTop div .desplDetail {
+          width: 30px;
+          margin: 0px 12px; }
+    section #heroesDetailSection .heroeDetail .heroeDetailCenter {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      display: none;
+      padding: 4px 20px;
+      box-sizing: border-box; }
+      section #heroesDetailSection .heroeDetail .heroeDetailCenter div {
+        clear: both; }
+      section #heroesDetailSection .heroeDetail .heroeDetailCenter p {
+        position: relative;
+        float: left;
+        width: 33%;
+        padding: 4px 12px;
+        font-size: 13pt;
+        display: flex; }
+        section #heroesDetailSection .heroeDetail .heroeDetailCenter p:hover {
+          background-color: rgba(0, 0, 0, 0.1); }
+        section #heroesDetailSection .heroeDetail .heroeDetailCenter p i {
+          margin-left: 4px; }
+
+div#goToUp {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 30px;
+  bottom: 15px;
+  border-radius: 40%;
+  background-color: #f9a121;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  div#goToUp svg {
+    width: 35px;
+    height: 35px;
+    fill: #fff; }
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin-top: 40px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: space-between; }
+  footer img {
+    position: relative;
+    width: 400px;
+    left: 50px;
+    top: 26px; }
+
+/*# sourceMappingURL=main.css.map */

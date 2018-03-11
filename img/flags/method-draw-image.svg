@@ -1,0 +1,24 @@
+<svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <clipPath transform="matrix(4.9382720758885625,0,0,4.9382720758885625,0,0) " id="svg_4">
+   <path id="svg_6" d="m171.851837,140.925919l30,0l0,15l-30,-15zl30,30l-30,0l0,-30zl-30,30l0,-15l30,-15zl-30,0l30,0z"/>
+  </clipPath>
+  <g stroke="null" id="svg_12">
+   <path stroke="null" id="svg_7" fill="#00247d" d="m141.851837,125.925919l0,163.14817l296.296325,0l0,-163.14817l-296.296325,0z"/>
+   <path stroke="#fff" id="svg_8" stroke-width="6" d="m141.851837,125.925919l296.296325,163.14817m0,-163.14817l-296.296325,163.14817"/>
+   <path stroke="#cf142b" id="svg_9" stroke-width="4" clip-path="url(#svg_4)" d="m141.851837,125.925919l296.296325,163.14817m0,-163.14817l-296.296325,163.14817"/>
+   <path stroke="#fff" id="svg_10" stroke-width="10" d="m289.999999,125.925919l0,163.14817m-148.148162,-81.574085l296.296325,0"/>
+   <path stroke="#cf142b" id="svg_11" stroke-width="6" d="m289.999999,125.925919l0,163.14817m-148.148162,-81.574085l296.296325,0"/>
+  </g>
+ </g>
+</svg>

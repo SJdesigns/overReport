@@ -1,0 +1,205 @@
+@import _header
+
+*
+	padding: 0px
+	margin: 0px
+	font-family: sans-serif
+
+body
+	background-color: #fff
+
+section
+	#sectionLeft
+		#medals, #generalStats, #recordStats
+			position: relative
+			width: 100%
+			height: auto
+
+			h2:first-letter
+				color: #2196f3
+
+			div>div
+				box-shadow: 2px 2px 8px rgba(0,0,0,.12)
+				h4
+					font-size: 16pt
+				p
+					font-size: 13pt
+
+				img
+					width: 50px
+					text-align: center
+
+				img+p
+					position: relative
+					margin-top: -36px
+					text-align: center
+					font-size: 14pt
+
+
+	#sectionRight
+		#heroesTop
+			position: relative
+			width: 100%
+			height: 60px
+			display: flex
+			margin-bottom: 2px
+			justify-content: space-between
+
+			h2:first-letter
+				color: #2196f3
+
+			select
+				position: relative
+				width: 220px
+				height: 30px
+				font-size: 13pt
+				margin-top: 22px
+				outline: 0
+				border: 0px
+				padding: 0px 8px
+				border-bottom: 2px solid #ccc
+				transition: border-bottom .15s
+				box-sizing: border-box
+
+				&:hover
+					border-bottom: 2px solid #2196f3
+
+		#heroesList
+			.heroeData
+				position: relative
+				width: 100%
+				height: 36px
+				margin: 2px 0px
+				transition: background-color .07s
+
+				&:hover
+					background-color: rgba(0,0,0,.1)
+
+				img
+					position: relative
+					float: left
+					width: 40px
+					height: 36px
+					margin-right: 12px
+
+				.heroeBar
+					position: absolute
+					width: 100%
+					height: 36px
+					padding-left: 40px
+
+					div
+						position: relative
+						width: 100%
+						height: 100%
+						box-sizing: border-box
+
+						span
+							position: absolute
+							width: 100%
+							height: 100%
+							left: 0px
+							background-color: rgba(0,0,0,.14)
+
+						p
+							font-size: 13pt
+							margin: 0px 5px
+							padding: 6px 0px 6px 5px
+							z-index: 1
+
+							i
+								float: right
+
+	#heroesDetailTitle
+		margin-top: 50px
+
+	#heroesDetailSection
+		margin-top: 12px
+
+		.heroeDetail
+			position: relative
+			width: 100%
+			height: auto
+			margin: 14px 0px
+
+			.heroeDetailTop
+				position: relative
+				width: 100%
+				height: 40px
+				background-color: #ddd
+				display: flex
+				justify-content: space-between
+
+				div
+					display: flex
+					.heroeDetailImg
+						width: 46px
+						height: 46px
+						margin: -14px 0px 0px 14px
+
+					h3
+						margin-top: 9px
+						margin-left: 15px
+
+					.desplDetail
+						width: 30px
+						margin: 0px 12px
+
+			
+			.heroeDetailCenter
+				position: relative
+				width: 100%
+				overflow: hidden
+				display: none
+				padding: 4px 20px
+				box-sizing: border-box
+
+				div
+					clear: both
+
+				p
+					position: relative
+					float: left
+					width: 33%
+					padding: 4px 12px
+					font-size: 13pt
+					display: flex
+
+					&:hover
+						background-color: rgba(0,0,0,.1)
+
+					i
+						margin-left: 4px
+
+div#goToUp
+	position: fixed
+	width: 50px
+	height: 50px
+	right: 30px
+	bottom: 15px
+	border-radius: 40%
+	background-color: #f9a121
+	z-index: 4
+	display: flex
+	justify-content: center
+	align-items: center
+
+	svg
+		width: 35px
+		height: 35px
+		fill: #fff
+
+footer
+	position: relative
+	width: 100%
+	height: 100px
+	margin-top: 40px
+	background-color: #ddd
+	display: flex
+	justify-content: space-between
+
+	img
+		position: relative
+		width: 400px
+		left: 50px
+		top: 26px
